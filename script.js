@@ -1,13 +1,12 @@
-let nota1 = parseFloat(prompt("Ingrese nota 1"));
-let nota2 = parseFloat(prompt("Ingrese nota 2"));
-let nota3 = parseFloat(prompt("Ingrese nota 3"));
+let num = prompt("Ingrese el numero que desee");
 
-let promedio = (nota1 + nota2 + nota3) / 3;
-
-if (promedio <= 3.9) {
-    alert ("Estudie");
-
-} else {
-    alert ("Becado")
+if (num % 2 == 0 && num > 10) {
+    alert("El numero es par y mayor a 10")
+} else if(num % 2 == 0 && num < 10){
+    alert("El numero es par y menor a 10")
+} else if (num % 2 !== 0 && num < 10) {
+    alert("El numero es impar, y es menor a 10")
 }
-
+else {
+    alert("El numero impar, y es mayor a 10")
+}
