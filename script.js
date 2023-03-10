@@ -1,25 +1,13 @@
-let person1  = {
-    nombre: prompt("1. Escriba su nombre"),
-    edad: parseInt(prompt("Cual es tu edad"))
-} 
-let person2  = {
-    nombre: prompt("2. Escriba su nombre"),
-    edad: parseInt(prompt("Cual es tu edad"))} 
-let person3  = {
-    nombre: prompt("3. Escriba su nombre"),
-    edad: parseInt(prompt("Cual es tu edad"))} 
+let num1 = parseFloat(prompt("Escriba el primer numero"));
+let num2 = parseFloat(prompt("Escriba el segundo numero"));
 
-let definirMayorNum =  Math.max(person1.edad, person2.edad, person3.edad);
+let suma = num1 + num2;
+let resta = num1 - num2;
 
-let personaMayor;
-
-if (definirMayorNum === person1.edad) {
-    personaMayor = person1;
-} else if (definirMayorNum === person2.edad) {
-    personaMayor = person2;
-
+let producto = num1 * num2;
+let division = num1 / num2;
+if (num1 > num2) {
+    alert(("La suma de los numeros es: " )+ suma  + (" y la diferencia es: " + resta));
 } else {
-    personaMayor = person3;
+    alert(("El producto de los numeros es: " )+ producto  + (" y la division es: " + division))
 }
-
-alert("La persona mayor tiene: " + definirMayorNum + " y se llama " + personaMayor.nombre);
