@@ -1,25 +1,12 @@
-let person1  = {
-    nombre: prompt("1. Escriba su nombre"),
-    edad: parseInt(prompt("Cual es tu edad"))
-} 
-let person2  = {
-    nombre: prompt("2. Escriba su nombre"),
-    edad: parseInt(prompt("Cual es tu edad"))} 
-let person3  = {
-    nombre: prompt("3. Escriba su nombre"),
-    edad: parseInt(prompt("Cual es tu edad"))} 
+ladoSquare = prompt(("Escriba el valor del lado del cuadrado"));
 
-let definirMayorNum =  Math.max(person1.edad, person2.edad, person3.edad);
+perimetro = ladoSquare * 4;
 
-let personaMayor;
+alert("El perimetro del cuadrado es de: " + perimetro);
 
-if (definirMayorNum === person1.edad) {
-    personaMayor = person1;
-} else if (definirMayorNum === person2.edad) {
-    personaMayor = person2;
+base = prompt("Escriba el valor de la base del rectangulo");
+altura = prompt("Escriba el valor de la altura del rectangulo")
 
-} else {
-    personaMayor = person3;
-}
+area = (base * altura);
 
-alert("La persona mayor tiene: " + definirMayorNum + " y se llama " + personaMayor.nombre);
+alert("El area del rectangulo es de: " + area)
