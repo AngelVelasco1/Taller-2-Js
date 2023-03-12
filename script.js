@@ -1,19 +1,24 @@
-let atlethesNames = [];
-let meterMark = [];
+let numbers = [];
+let sum = 0;
+let prom = 0;
+let digitados = 0;
 
 do {
-    atlethesNames.push(prompt("Escriba su nombre"));
-    meterMark.push(parseFloat(prompt("Cual es tu marca de salto en metros?"))); 
+    let num = parseFloat(prompt("Digite un numero"));
+     if(num == 0 || isNaN(num)) {
+        break;
+    }
+
+    numbers.push(num);
+
+    sum += num;
+    digitados = numbers.length;
+    prom = sum / digitados;
+    maxNum = Math.max(...numbers);
+    minNum = Math.min(...numbers);
+} 
+  while(confirm("Vas a añadir un nuevo numero?")) {
 }
-    while(confirm("¿Vas a añadir mas atletas?")) {  
-  }
+alert(`La suma es de: ${sum} y el promedio de: ${prom} `);
+alert(`Se digitaron: ${digitados} numeros. El mayor es: ${maxNum}🔼 y el menor: ${minNum}🔽`);
 
-let championAtlethe = meterMark.indexOf(Math.max(...meterMark));
-let record = (meterMark[championAtlethe] > 15.5);
-
-if (record) {
-    alert(`La atleta campeona es ${atlethesNames[championAtlethe]} con un salto de ${meterMark[championAtlethe]} metros superando el record🤑`);
-
-} else {
-    alert(`La atleta campeona es ${atlethesNames[championAtlethe]} pero no hizo record😖`);
-}
